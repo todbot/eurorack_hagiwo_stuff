@@ -9876,6 +9876,10 @@ DIN A4, landscape with location and doc. field</description>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="S1" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="10-XX" device="" package3d_urn="urn:adsk.eagle:package:27496/1"/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="100n"/>
+<part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10141,9 +10145,22 @@ https://note.com/solder_state/n/n30b3a8737b1e</text>
 <instance part="GND21" gate="1" x="55.88" y="93.98" smashed="yes">
 <attribute name="VALUE" x="53.34" y="91.44" size="1.778" layer="96"/>
 </instance>
-<instance part="IC1" gate="B" x="160.02" y="35.56" smashed="yes">
-<attribute name="NAME" x="162.56" y="38.735" size="1.778" layer="95"/>
-<attribute name="VALUE" x="162.56" y="30.48" size="1.778" layer="96"/>
+<instance part="IC1" gate="B" x="170.18" y="35.56" smashed="yes">
+<attribute name="NAME" x="172.72" y="38.735" size="1.778" layer="95"/>
+<attribute name="VALUE" x="172.72" y="30.48" size="1.778" layer="96"/>
+</instance>
+<instance part="GND22" gate="1" x="160.02" y="38.1" smashed="yes" rot="R270">
+<attribute name="VALUE" x="157.48" y="40.64" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="C10" gate="G$1" x="116.84" y="78.74" smashed="yes">
+<attribute name="NAME" x="118.364" y="79.121" size="1.778" layer="95"/>
+<attribute name="VALUE" x="118.364" y="74.041" size="1.778" layer="96"/>
+</instance>
+<instance part="P+10" gate="1" x="116.84" y="83.82" smashed="yes">
+<attribute name="VALUE" x="115.062" y="84.582" size="1.778" layer="96"/>
+</instance>
+<instance part="GND23" gate="1" x="116.84" y="71.12" smashed="yes">
+<attribute name="VALUE" x="114.3" y="68.58" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -10278,6 +10295,14 @@ https://note.com/solder_state/n/n30b3a8737b1e</text>
 <pinref part="S1" gate="1" pin="P"/>
 <pinref part="GND21" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="B" pin="+IN"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="2"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -10316,6 +10341,10 @@ https://note.com/solder_state/n/n30b3a8737b1e</text>
 <segment>
 <pinref part="D8" gate="G$1" pin="C"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="1"/>
+<pinref part="P+10" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -10565,6 +10594,15 @@ https://note.com/solder_state/n/n30b3a8737b1e</text>
 <wire x1="55.88" y1="109.22" x2="50.8" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="106.68" x2="55.88" y2="109.22" width="0.1524" layer="91"/>
 <junction x="55.88" y="109.22"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="IC1" gate="B" pin="OUT"/>
+<wire x1="177.8" y1="35.56" x2="177.8" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="27.94" x2="162.56" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="B" pin="-IN"/>
+<wire x1="162.56" y1="27.94" x2="162.56" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
