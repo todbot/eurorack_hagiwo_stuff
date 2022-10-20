@@ -8,5 +8,8 @@ So far just a PCB version of ["additive_vco"](https://note.com/solder_state/n/n3
 
 Here's a little demo video of it in action:
 
-https://user-images.githubusercontent.com/274093/197077549-f81a2e05-508c-4a3f-a483-26bdcd0a558a.mp4
+
+
+
+https://user-images.githubusercontent.com/274093/197078909-dfc56eac-acbd-4a94-ae75-ff46f5945844.mp4
 
